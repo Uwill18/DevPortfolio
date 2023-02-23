@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#00004d;
+  color: #EDEADE;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.tabcontent{
+ 
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  background-color:#000;
+  height:800px;
+  width:940px;
+  color: #FFF;
+}
+
+#London{
+background-color:#00F;
+height:800px;
+width:940px;
+
+}
+
+#Paris{
+background-color:#0F0;
+height:800px;
+width:940px;
+
+}
+
+#Tokyo{
+background-color:#F00;
+height:800px;
+width:940px;
+}
+
+.bar-item{
+width:100%;
+display:block;
+padding:16px 32px;
+
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="tab">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="tablinks bar-item" onclick="openCity(event, 'main')" id="defaultOpen">Home</a>
+  <a class="tablinks bar-item" onclick="openCity(event, 'London')">London</a>
+  <a class="tablinks bar-item" onclick="openCity(event, 'Paris')">Paris</a>
+  <a class="tablinks bar-item" onclick="openCity(event, 'Tokyo')">Tokyo</a>
+</div>
+</div>
+
+
+
+
+
+<div id="main" class="tabcontent">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+  
+</div>
+
+
+<div id="London" class="tabcontent">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

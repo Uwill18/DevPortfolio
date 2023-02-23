@@ -16,7 +16,6 @@ body {
   top: 0;
   left: 0;
   background-color:#00004d;
-  color: #EDEADE;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -32,7 +31,7 @@ body {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #ADD8E6;
 }
 
 .sidenav .closebtn {
@@ -50,11 +49,9 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-.tabcontent{
- 
-}
 
-#main {
+
+#Home {
   transition: margin-left .5s;
   padding: 16px;
   background-color:#000;
@@ -63,22 +60,29 @@ body {
   color: #FFF;
 }
 
-#London{
+#About{
 background-color:#00F;
 height:800px;
 width:940px;
 
 }
 
-#Paris{
+#Skills{
 background-color:#0F0;
 height:800px;
 width:940px;
 
 }
 
-#Tokyo{
+#Projects{
 background-color:#F00;
+height:800px;
+width:940px;
+}
+
+
+#Contact{
+background-color:#F0F;
 height:800px;
 width:940px;
 }
@@ -98,10 +102,11 @@ padding:16px 32px;
 <div class="tab">
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a class="tablinks bar-item" onclick="openCity(event, 'main')" id="defaultOpen">Home</a>
-  <a class="tablinks bar-item" onclick="openCity(event, 'London')">London</a>
-  <a class="tablinks bar-item" onclick="openCity(event, 'Paris')">Paris</a>
-  <a class="tablinks bar-item" onclick="openCity(event, 'Tokyo')">Tokyo</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Home')" id="defaultOpen">Home</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'About')">About</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Skills')">Skills</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Projects')">Projects</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Contact')">Contact</a>
 </div>
 </div>
 
@@ -109,7 +114,7 @@ padding:16px 32px;
 
 
 
-<div id="main" class="tabcontent">
+<div id="Home" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
   <h2>Sidenav Push Example</h2>
   <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
@@ -117,24 +122,32 @@ padding:16px 32px;
 </div>
 
 
-<div id="London" class="tabcontent">
+<div id="About" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
   <h3>London</h3>
   <p>London is the capital city of England.</p>
 </div>
 
-<div id="Paris" class="tabcontent">
+<div id="Skills" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
   <h3>Paris</h3>
   <p>Paris is the capital of France.</p> 
 </div>
 
-<div id="Tokyo" class="tabcontent">
+<div id="Projects" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
 
+<div id="Contact" class="tabcontent">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+
+<!--Nav opening script-->
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -148,8 +161,10 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 </script>
+<!--Nav opening script-->
+<!---Tab functions-->
 <script>
-function openCity(evt, cityName) {
+function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -159,13 +174,14 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
+<!---Tab functions-->
    
 </body>
 </html> 

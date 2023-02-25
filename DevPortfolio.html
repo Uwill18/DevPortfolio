@@ -98,6 +98,12 @@ padding:16px 32px;
 
 }
 
+.quote-text{
+  background-color: #3A7CA5;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
 </style>
 </head>
 <body>
@@ -131,9 +137,25 @@ padding:16px 32px;
 
 <div id="About" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+      <h2>About Me</h2>
+    <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
+
+
+
+<h3>Favorite Quotes</h3>
+
+<div class="quote-text"><p>“To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.” ― Leonardo da Vinci.</p></div>
+<div class="quote-text"><p>"Only one who devotes himself to a cause with his whole strength and soul can be a truemaster. For this reason mastery demands all of a person" ― Albert Einstein</p></div>
+<div class="quote-text"><p>“Be the change that you wish to see in the world.” ― Mahatma Ghandi</p></div>
+
 </div>
+
+
+
+
+
+
+
 
 <div id="Skills" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
@@ -189,6 +211,24 @@ function openTab(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 <!---Tab functions-->
+<!---Slideshow function--->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("quote-text");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 15000); // Change quote slides every 15 seconds
+}
+</script>
+<!---Slideshow function--->
    
 </body>
 </html> 

@@ -73,14 +73,14 @@ width:940px;
 
 #Skills{
 background-color:#0F0;
-height:800px;
+height:900px;
 width:940px;
 
 }
 
 #Projects{
 background-color:#F00;
-height:800px;
+height:100%;
 width:940px;
 }
 
@@ -102,6 +102,92 @@ padding:16px 32px;
   background-color: #3A7CA5;
   border-radius: 8px;
   font-size: 18px;
+}
+
+
+#Skills{
+ background-color:#290916;
+ width: 100%;
+ height: 100%;
+ color:white;
+}
+
+* {box-sizing: border-box}
+
+.progress-container {
+  width: 100%;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 98%; background-color: #04AA6D; border-radius:20px;}
+.css {width: 97%; background-color: #04AA6D; border-radius:20px;}
+.js {width: 95%; background-color: #04AA6D; border-radius:20px;}
+.react {width: 92%; background-color: #04AA6D; border-radius:20px;}
+.python {width: 97%; background-color: #04AA6D;border-radius:20px;}
+.sql {width: 95%; background-color: #04AA6D; border-radius:20px;}
+.java {width: 90%; background-color: #04AA6D; border-radius:20px;}
+.cpp {width: 85%; background-color: #04AA6D;border-radius:20px;}
+
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
 }
 
 </style>
@@ -159,14 +245,142 @@ padding:16px 32px;
 
 <div id="Skills" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+
+<h1>My Skills</h1>
+
+<p>HTML</p>
+<div class="progress-container">
+  <div class="skills html">98%</div>
+</div>
+
+<p>CSS</p>
+<div class="progress-container">
+  <div class="skills css">97%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="progress-container">
+  <div class="skills js">95%</div>
+</div>
+
+<p>React</p>
+<div class="progress-container">
+  <div class="skills react">92%</div>
+</div>
+
+
+<p>Python</p>
+<div class="progress-container">
+  <div class="skills python">97%</div>
+</div>
+
+<p>SQL</p>
+<div class="progress-container">
+  <div class="skills sql">95%</div>
+</div>
+
+
+<p>Java</p>
+<div class="progress-container">
+  <div class="skills java">90%</div>
+</div>
+
+
+<p>C++</p>
+<div class="progress-container">
+  <div class="skills cpp">85%</div>
+</div>   
+<br/>
+<br/>
+<br/>
+
 </div>
 
 <div id="Projects" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+  
+  <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <br/>
+<br/>
+<br/>
+<br/>
+  </div>
+
+<!-- END GRID -->
+  </div>
 </div>
 
 <div id="Contact" class="tabcontent">
@@ -229,6 +443,54 @@ function carousel() {
 }
 </script>
 <!---Slideshow function--->
+<!---Grid F(x) --->
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<!---Grid F(x) --->
    
 </body>
 </html> 

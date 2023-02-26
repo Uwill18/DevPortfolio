@@ -213,11 +213,10 @@ padding:16px 32px;
 
 <div id="Home" class="tabcontent">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  <h2>Hello.</h2>
-    <p>My name is Uri W. Easter.</p>
-    <p>I am a Full-Stack Developer who designs state of the art User Experiences
-        that are a dream for each of my clients. </p>
-        <p>Welcome to my site!</p>
+  <h2>Hello!</h2>
+    <p id="welcome"></p>
+ 
+        
   
 </div>
 
@@ -492,6 +491,29 @@ for (var i = 0; i < btns.length; i++) {
 </script>
 
 <!---Grid F(x) --->
-   
+<!---Typewriter Function--->
+<!---https://www.youtube.com/watch?v=dbdYazO4IZ4-->
+        <script>
+            
+            var i = 1;
+            function func()
+            {
+                var message = "My name is Uri W. Easter.I am a Full-Stack Developer who designs state of the art User Experiences that are a dream for each of my clients.Welcome to my site!";
+                if( i <= message.length )
+                {
+                    
+                    var txt = message.substring(0,i);
+                    document.getElementById("welcome").innerHTML = txt;
+                    setTimeout("func()",75);
+                    i++;
+                }
+                
+            }
+            
+            func();
+
+        </script>
+
+<!---Typewriter Function--->   
 </body>
 </html> 

@@ -204,7 +204,39 @@ padding:16px 32px;
   color: white;
 }
 
+
+.animated-progress {
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 20px 10px;
+  border: 1px solid rgb(189, 113, 113);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+  border-radius: 15px;
+}
+
+.progress-green span {
+  background-color: green;
+}
+
+.skilltype{
+  margin-left:1%;
+}
+
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
 
@@ -262,48 +294,41 @@ padding:16px 32px;
 <h1>My Skills</h1>
 <!--https://codepen.io/alvarotrigo/pen/WNZQdyq-->
 
-<p>HTML</p>
-<div class="progress-container">
-  <div class="skills html">98%</div>
-</div>
+<!--Start Animated Progress Bar-->
+<p class="skilltype">HTML</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="98"></span>
+      </div>
+<p class="skilltype">CSS</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="97"></span>
+      </div>
+<p class="skilltype">JavaScript</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="95"></span>
+      </div>
+<p class="skilltype">React</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="92"></span>
+      </div>
+<p class="skilltype">Python</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="97"></span>
+      </div>
+<p class="skilltype">SQL</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="95"></span>
+      </div>
+<p class="skilltype">Java</p>
+      <div class="animated-progress progress-green">
+        <span data-progress="93"></span>
+      </div>
+<p class="skilltype">C++</p>
+            <div class="animated-progress progress-green">
+        <span data-progress="85"></span>
+      </div>
+<!--End Animated Progress Bar-->
 
-<p>CSS</p>
-<div class="progress-container">
-  <div class="skills css">97%</div>
-</div>
-
-<p>JavaScript</p>
-<div class="progress-container">
-  <div class="skills js">95%</div>
-</div>
-
-<p>React</p>
-<div class="progress-container">
-  <div class="skills react">92%</div>
-</div>
-
-
-<p>Python</p>
-<div class="progress-container">
-  <div class="skills python">97%</div>
-</div>
-
-<p>SQL</p>
-<div class="progress-container">
-  <div class="skills sql">95%</div>
-</div>
-
-
-<p>Java</p>
-<div class="progress-container">
-  <div class="skills java">90%</div>
-</div>
-
-
-<p>C++</p>
-<div class="progress-container">
-  <div class="skills cpp">85%</div>
-</div>   
 <br/>
 <br/>
 <br/>
@@ -529,5 +554,18 @@ for (var i = 0; i < btns.length; i++) {
         </script>
 
 <!---Typewriter Function--->   
+<!---JQuery for Skills--->
+<script>
+$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    75000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});
+</script>
+<!---JQuery for Skills--->
 </body>
 </html> 

@@ -50,7 +50,7 @@ body {
 }
 
 .tabcontent{
- 
+
 }
 
 #Home {
@@ -121,6 +121,7 @@ padding:16px 32px;
  width: 100%;
  height: 100%;
  color:white;
+ 
 }
 
 * {box-sizing: border-box}
@@ -132,10 +133,12 @@ padding:16px 32px;
 }
 
 .skills {
-  text-align: right;
+  /*text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: white;
+  color: white;*/
+  margin-left:22%;
+  margin-right:25%;
 }
 
 .html {width: 98%; background-color: #04AA6D; border-radius:20px;}
@@ -232,8 +235,27 @@ padding:16px 32px;
   background-color: green;
 }
 
+.skilltype-top{
+  margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  border-radius: 0 20px 0 0;
+  width: 500px;
+  padding: 10px;
+}
+
 .skilltype{
   margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  width: 500px;
+  padding: 10px;
+}
+
+.skilltype-bottom{
+  margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  border-radius: 0 0 0 20px;
+  width: 500px;
+  padding: 10px;
 }
 
 </style>
@@ -289,51 +311,62 @@ padding:16px 32px;
 
 
 
-<div id="Skills" class="tabcontent">
+<div id="Skills" class="tabcontent ">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<div class= "skills">
 
 <h1>My Skills</h1>
 <!--https://codepen.io/alvarotrigo/pen/WNZQdyq-->
 
 <!--Start Animated Progress Bar-->
-<p class="skilltype">HTML</p>
+<div class="skilltype-top">HTML
       <div class="animated-progress progress-green">
         <span data-progress="98"></span>
       </div>
-<p class="skilltype">CSS</p>
+      </div>
+<div class="skilltype">CSS
       <div class="animated-progress progress-green">
         <span data-progress="97"></span>
       </div>
-<p class="skilltype">JavaScript</p>
+      </div>
+<div class="skilltype">JavaScript
       <div class="animated-progress progress-green">
         <span data-progress="95"></span>
       </div>
-<p class="skilltype">React</p>
+      </div>
+<div class="skilltype">React
       <div class="animated-progress progress-green">
         <span data-progress="92"></span>
       </div>
-<p class="skilltype">Python</p>
+      </div>
+<div class="skilltype">Python
       <div class="animated-progress progress-green">
         <span data-progress="97"></span>
       </div>
-<p class="skilltype">SQL</p>
+      </div>
+<div class="skilltype">SQL
       <div class="animated-progress progress-green">
         <span data-progress="95"></span>
       </div>
-<p class="skilltype">Java</p>
+      </div>
+<div class="skilltype">Java
       <div class="animated-progress progress-green">
         <span data-progress="93"></span>
       </div>
-<p class="skilltype">C++</p>
+      </div>
+<div class="skilltype-bottom">C++
             <div class="animated-progress progress-green">
         <span data-progress="85"></span>
+      </div>
+         <br/>
       </div>
 <!--End Animated Progress Bar-->
 
 <br/>
 <br/>
 <br/>
-
+</div>
 </div>
 
 <div id="Projects" class="tabcontent">

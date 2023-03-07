@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.outer{
+display:inline-block;
+background-color:black;
+color:white;
+width: 300px;
+height: 315px;
+
 }
+
 
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
-  perspective: 1000px;
+  display:inline-block;
+}
+
+.flip-cardb {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  display:inline-block;
 }
 
 .flip-card-inner {
-  position: relative;
+  
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: transform 0.6s;/*latency time for transformation*/
+   /*transform-style: preserve-3d;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-cardb:hover .flip-card-inner {
   transform: rotateX(180deg);
 }
 
 .flip-card-front, .flip-card-back {
-  position: absolute;
+  
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
@@ -37,33 +51,58 @@ body {
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color:#000 ;
+  color: white;
+  
 }
 
 .flip-card-back {
   background-color: #2980b9;
   color: white;
-  transform: rotateX(180deg);
+  /*transform: rotateX(180deg);*/
 }
+
+
+.mission{
+background-color:blue;
+color:white;
+
+}
+
+
 </style>
-</head>
 <body>
 
-<h1>Card Flip with Text</h1>
-<h3>Hover over the image below:</h3>
+<div class="w3-container">
+  <h2>Cards</h2>
+  <p>Create paper-like cards with the w3-card classes:</p>
+  
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
+  
+     <div class="flip-card ">
+ <div class="flip-card-inner "> 
+ <div class="flip-card-front">
+ <p>to save the world</p>
+ </div>
+ </div>
+ </div>
+ 
+    <div class="flip-cardb">
+ <div class="flip-card-inner"> 
+ <div class="flip-card-front mission">
+ <p>to save the world</p>
+ </div>
+ </div>
+ </div>
+ 
+
+
+
+  
+  
+  
+  <div class="w3-panel w3-card-2"><p>w3-card-2</p></div>
+  <div class="w3-panel w3-card-4"><p>w3-card-4</p></div>
 </div>
 
 </body>

@@ -14,11 +14,13 @@ body {
   width: 300px;
   height: 200px;
   perspective: 1000px;
+  right:5px;
   display:inline-block;
 }
 
 .flip-card-inner {
   position: relative;
+  right:5px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -63,6 +65,12 @@ background-color:blue;
 color:white;
 }
 
+/*.vertical-text {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            
+        }*//*works*/
+
 
 </style>
 </head>
@@ -74,7 +82,7 @@ color:white;
      <div class="flip-cardb ">
  <div class="flip-card-inner "> 
  <div class="flip-card-front">
- <p>mission</p>
+ <p>Mission</p>
  </div>
  </div>
  </div>
@@ -98,3 +106,4 @@ color:white;
 
 </body>
 </html>
+<!--https://www.lambdatest.com/blog/why-developers-still-hate-vertical-text-orientation-in-css/#:~:text=To%20create%20vertically%20oriented%20text,horizontal%20(horizontal%2Dtb).-->

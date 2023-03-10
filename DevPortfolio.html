@@ -65,7 +65,7 @@ body {
 }
 
 #About{
-background-color:#00F;
+/*background-color:#00F;*/
 height:800px;
 width:940px;
 
@@ -246,6 +246,20 @@ padding:16px 32px;
   padding: 10px;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+  height:800px;
+width:940px;
+}
+
+.light-mode {
+  background-color: #00F;
+  color: white;
+  height:800px;
+width:940px;
+}
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
@@ -277,7 +291,7 @@ padding:16px 32px;
 </div>
 
 
-<div id="About" class="tabcontent">
+<div id="About" class="tabcontent darkmode">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
       <h2>About Me</h2>
     <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
@@ -289,6 +303,10 @@ padding:16px 32px;
 <div class="quote-text"><p>“To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.” ― Leonardo da Vinci.</p></div>
 <div class="quote-text"><p>"Only one who devotes himself to a cause with his whole strength and soul can be a truemaster. For this reason mastery demands all of a person" ― Albert Einstein</p></div>
 <div class="quote-text"><p>“Be the change that you wish to see in the world.” ― Mahatma Ghandi</p></div>
+
+
+<button onclick="darkmode()">Toggle dark mode</button>
+
 
 </div>
 
@@ -590,6 +608,16 @@ $(".animated-progress span").each(function () {
 });
 </script>
 <!---JQuery for Skills--->
+<!--dark mode-->
+<script>
+function darkmode() {
+   var element = document.getElementById("About");
+   element.classList.toggle("dark-mode");
+}
+</script>
+<!--dark mode-->
 </body>
 </html> 
-<!--about me research-->
+
+
+

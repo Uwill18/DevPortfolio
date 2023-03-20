@@ -655,6 +655,977 @@ display:block;
 <br/>
 <br/>
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#00004d;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #C8DFEA;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #FFF;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.tabcontent{
+
+}
+
+#Home {
+  transition: margin-left .5s;
+  padding: 16px;
+  /*background-color:#000;*/
+  background-image:url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2FmZGE2MDVkYmIxNTBjMjg0OGNiOGVhY2Q4NzQ4MmMwYTY5NGZkMyZjdD1n/KDteAGZcv7LiehlTDm/giphy.gif");
+  background-size:cover;
+  height:1000px;
+  max-width:100%;
+  color: #000;
+  font-size: 36px;
+  font-family:Candara;
+}
+
+#welcome-spacing{
+margin-top:5.5%;
+}
+
+
+
+
+#About{
+/*background-color:#00F;*/
+height:800px;
+width:940px;
+
+}
+
+.about-entry{
+ font-size: 16px;
+ justify-content: center;
+ text-align: center;
+ margin-top: 6%;
+}
+
+
+
+#Skills{
+background-color:#0F0;
+height:900px;
+width:940px;
+
+}
+
+#Projects{
+background-color:#282828;
+color:black;
+height:100%;
+max-width: 1000px;
+margin:auto;
+}
+
+
+#Contact{
+background-color:#F0F;
+height:800px;
+width:940px;
+}
+
+.bar-item{
+width:100%;
+display:block;
+padding:16px 32px;
+
+}
+
+.quote-text{
+  background-image: url("https://thumbs.dreamstime.com/b/ancient-papyrus-background-2467019.jpg");
+  border-radius: 0px 0px 8px 8px;
+  font-size: 18px;
+  padding: 32px;
+  width: 750px;
+  text-align:center;
+}
+
+
+.Quotes_hdr{
+    padding:16px 8px;
+    box-shadow:0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color:#E0AA3E;
+    border-radius:10px 10px 0px 0px;
+    text-align:center;
+    color:white;
+    width: 750px;
+}
+
+
+#Skills{
+ background-color:#290916;
+ width: 100%;
+ height: 100%;
+ color:white;
+ 
+}
+
+* {box-sizing: border-box}
+
+.progress-container {
+  width: 100%;
+  background-color: #BEBEBE;
+  border-radius: 20px;
+}
+
+.skills {
+  
+
+        left: 30%;
+        margin-right: -30;
+        position: relative;
+        background-color:#290916;
+        
+}
+
+
+
+
+.row {
+  margin: 10px -16px;
+  height: 1100px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+  
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+  
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  color:black;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.animated-progress {
+  width: 550px;
+  height: 30px;
+  border-radius: 14.5px;
+  background-color: #EDEDED;
+  margin: 20px 10px;
+  border: 1px solid rgb(189, 113, 113);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+  border-radius: 15px;
+}
+
+.progress-green span {
+  background-color: green;
+}
+
+.skilltype-top{
+  margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  border-radius: 0 20px 0 0;
+  width: 700px;
+  padding: 10px;
+}
+
+.skilltype{
+  margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  width: 700px;
+  padding: 10px;
+}
+
+.skilltype-bottom{
+  margin-left:1%;
+  background-image: linear-gradient(to bottom right, #7B899B, #353B43);
+  border-radius: 0 0 0 20px;
+  width: 700px;
+  padding: 10px;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 200px;
+  perspective: 1000px;
+  right:5px;
+  display:inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  right:5px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-inner-right {
+  position: relative;
+  left:-10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #313639;
+}
+
+.flip-card-back {
+  background-color: #313639;
+  color: white;
+  
+  transform: rotateX(180deg);
+}
+
+
+.flip-cardb {
+  /*background-color: transparent;*/
+  width: 75px;
+  height: 200px;
+  display:inline-block;
+  
+}
+
+
+
+
+.mission_left{
+background-color:#00AB41;
+color:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+
+.mission_right{
+background-color:#00AB41;
+color:white;
+border-radius: 0px 10px 10px 0px;
+}
+
+.mission_front{
+color: #39ff14;
+font-family:Inconsolata, monospace;
+justify-content: center;
+}
+
+.story_left{
+background-color:#051094;
+color:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+
+.story_right{
+background-color:#051094;
+color:white;
+border-radius: 0px 10px 10px 0px;
+}
+
+
+
+
+.fam_left{
+background-color:#710193;
+color:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+.fam_right{
+background-color:#710193;
+color:white;
+border-radius: 0px 10px 10px 0px;
+}
+
+
+
+.hobbies_right{
+background-color:#ff6289;
+color:white;
+border-radius: 0px 10px 10px 0px;
+}
+
+
+.hobbies_left{
+background-color:#ff6289;
+color:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  height:800px;
+width:940px;
+}
+
+.light-mode {
+  background-color: #FFF;
+  color: black;
+  height:1500px;
+width:940px;
+}
+
+
+
+.container{
+display:block;
+ position: absolute;
+        left: 30%;
+        margin-right: -30%;
+}
+
+
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div class="tab">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Home')" id="defaultOpen">Home</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'About')">About</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Skills')">Skills</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Projects')">Projects</a>
+  <a class="tablinks bar-item" onclick="openTab(event, 'Contact')">Contact</a>
+</div>
+</div>
+
+
+
+
+
+<div id="Home" class="tabcontent">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id="welcome-spacing">
+  <h2>Hello!</h2>
+    <p id="welcome"></p>
+    </div>
+ 
+        
+  
+</div>
+
+
+<div id="About" class="tabcontent darkmode">
+<span style="font-size:30px;cursor:pointer;color: #39ff14;" onclick="openNav()">&#9776; open</span>
+<div class = "container">
+      <h2 style="color: #39ff14;
+  font-family:Inconsolata, monospace;">About Me</h2>
+
+
+<!--stationary card-->
+     <div class="flip-cardb mission_left">
+ <div class="flip-card-inner "> 
+ <div class="flip-card-front mission_left">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+
+
+<!--moving card-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front mission_front">
+    <br/>
+    <br/>
+    <br/>
+      <p>AboutMission()</p>
+    </div>
+    <div class="flip-card-back">
+      <p class="about-entry"> Engineering excellence tailored to each client's vision through the integration of my experiences in art, psychology, and computer science. </p> 
+    </div>
+  </div>
+</div>
+<!--moving card-->
+
+
+
+<!--stationary card-->
+     <div class="flip-cardb">
+ <div class="flip-card-inner-right "> 
+ <div class="flip-card-front mission_right">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+<br/>
+<br/>
+
+
+
+
+<!--stationary card-->
+     <div class="flip-cardb story_left">
+ <div class="flip-card-inner "> 
+ <div class="flip-card-front story_left">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+
+
+<!--moving card-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <br/>
+    <br/>
+    <br/>
+      <p style="color: #34e2e2;
+  font-family:Inconsolata, monospace;">AboutStory()</p>
+    </div>
+    <div class="flip-card-back">
+      <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
+    </div>
+  </div>
+</div>
+<!--moving card-->
+<!--stationary card-->
+     <div class="flip-cardb">
+ <div class="flip-card-inner-right "> 
+ <div class="flip-card-front story_right">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+<br/>
+<br/>
+
+
+
+
+
+
+<!--stationary card-->
+     <div class="flip-cardb fam_left">
+ <div class="flip-card-inner "> 
+ <div class="flip-card-front fam_left">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+
+
+<!--moving card-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <br/>
+    <br/>
+    <br/>
+      <p style="color: #ad7fa8;
+  font-family:Inconsolata, monospace;">AboutFamily()</p>
+    </div>
+    <div class="flip-card-back">
+      <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife and I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
+    </div>
+  </div>
+</div>
+<!--moving card-->
+<!--stationary card-->
+     <div class="flip-cardb">
+ <div class="flip-card-inner-right "> 
+ <div class="flip-card-front fam_right">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+
+<br/>
+<br/>
+
+<!--stationary card-->
+     <div class="flip-cardb hobbies_left">
+ <div class="flip-card-inner "> 
+ <div class="flip-card-front hobbies_left">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+
+
+<!--moving card-->
+<div class="flip-card ">
+  <div class="flip-card-inner">
+    <div class="flip-card-front ">
+    <br/>
+    <br/>
+    <br/>
+      <p style="color: #F59784;
+  font-family:Inconsolata, monospace;">AboutHobbies()</p>
+    </div>
+    <div class="flip-card-back">
+      <p class="about-entry">  
+In addition to learning programming languages in my free time, I also enjoy learning new human languages, traveling, writing stories, or entertaining myself with television. </p> 
+    </div>
+  </div>
+</div>
+<!--moving card-->
+<!--stationary card-->
+     <div class="flip-cardb">
+ <div class="flip-card-inner-right "> 
+ <div class="flip-card-front hobbies_right">
+ </div>
+ </div>
+ </div>
+ <!--stationary card-->
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+ <div class='Quotes_hdr'>
+<h3>Favorite Quotes</h3>
+</div>  
+<div class="quote-text"> 
+<p>“To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.” </p>
+<br/>
+<p>― Leonardo da Vinci.</p>
+</div>
+<div class="quote-text">
+  <p>"Only one who devotes himself to a cause with his whole strength and soul can be a true master. For this reason mastery demands all of a person"</p>
+<br/>
+<p>― Albert Einstein</p>
+</div>
+<div class="quote-text"><p>“Be the change that you wish to see in the world.”</p>
+  <br/>
+  <p> ― Mahatma Ghandi</p>
+</div>
+<br/>
+<br/>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="Skills" class="tabcontent ">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<div class= "skills">
+
+<h1>My Skills</h1>
+<!--https://codepen.io/alvarotrigo/pen/WNZQdyq-->
+
+<!--Start Animated Progress Bar-->
+<div class="skilltype-top">HTML
+      <div class="animated-progress progress-green">
+        <span data-progress="98"></span>
+      </div>
+      </div>
+<div class="skilltype">CSS
+      <div class="animated-progress progress-green">
+        <span data-progress="97"></span>
+      </div>
+      </div>
+<div class="skilltype">JavaScript
+      <div class="animated-progress progress-green">
+        <span data-progress="95"></span>
+      </div>
+      </div>
+<div class="skilltype">React
+      <div class="animated-progress progress-green">
+        <span data-progress="92"></span>
+      </div>
+      </div>
+<div class="skilltype">Python
+      <div class="animated-progress progress-green">
+        <span data-progress="97"></span>
+      </div>
+      </div>
+<div class="skilltype">SQL
+      <div class="animated-progress progress-green">
+        <span data-progress="95"></span>
+      </div>
+      </div>
+<div class="skilltype">Java
+      <div class="animated-progress progress-green">
+        <span data-progress="93"></span>
+      </div>
+      </div>
+<div class="skilltype-bottom">C++
+            <div class="animated-progress progress-green">
+        <span data-progress="85"></span>
+      </div>
+         <br/>
+      </div>
+<!--End Animated Progress Bar-->
+
+<br/>
+<br/>
+<br/>
+
+</div>
+</div>
+
+<div id="Projects" class="tabcontent">
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <br/>
+  <br/>
+  
+  <div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('college')"> College</button>
+  <button class="btn" onclick="filterSelection('nucamp')"> Nucamp</button>
+  <button class="btn" onclick="filterSelection('self_study')"> Self-Study</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column college">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h4>Roster Application</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column college">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h4>W.I.M.S.</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column college">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h4>Cordinus Global</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="column nucamp">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+      <h4>Nucamp Bootstrap Website</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nucamp">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Nucamp React Website</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nucamp">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Nucamp React Application</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column self_study">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>SoloLearn Reference Guide</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column self_study">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Brancher</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column self_study">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+      <h4>Brancher 2.0</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <br/>
+<br/>
+<br/>
+<br/>
+  </div>
+
+<!-- END GRID -->
+  </div>
+</div>
+
+<div id="Contact" class="tabcontent">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+
+<!--Nav opening script-->
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+<!--Nav opening script-->
+<!---Tab functions-->
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<!---Tab functions-->
+<!---Slideshow function--->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("quote-text");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 15000); // Change quote slides every 15 seconds
+}
+</script>
+<!---Slideshow function--->
+<!---Grid F(x) --->
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    ClassRemover(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) ClassAdder(x[i], "show");
+  }
+}
+
+function ClassAdder(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function ClassRemover(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<!---Grid F(x) --->
+<!---Typewriter Function--->
+<!---https://www.youtube.com/watch?v=dbdYazO4IZ4-->
+        <script>
+            
+            var i = 1;
+            function func()
+            {
+                var message = "My name is Uri W. Easter. I am a Full-Stack Developer who designs ideal User Experiences suited to the respective vision of each client. Welcome to my site!";
+                if( i <= message.length )
+                {
+                    
+                    var txt = message.substring(0,i);
+                    document.getElementById("welcome").innerHTML = txt;
+                    setTimeout("func()",95);
+                    i++;
+                }
+                
+            }
+            
+            func();
+
+        </script>
+
+<!---Typewriter Function--->   
+<!---JQuery for Skills--->
+<script>
+$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    12000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});
+</script>
+<!---JQuery for Skills--->
+
+</body>
+</html> 
+
+
+
 
 </div>
 

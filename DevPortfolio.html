@@ -95,11 +95,7 @@ width:940px;
 
 
 .card-container{
-
-display: block;
-
-
-
+display: flex;
 }
 
 
@@ -251,6 +247,7 @@ padding:16px 32px;
   text-align: end;
   padding-right: 5px;
   border-radius: 15px;
+  
 }
 
 .progress-green span {
@@ -358,6 +355,7 @@ border-radius: 10px 0px 0px 10px;
 background-color:#00AB41;
 color:white;
 border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
 }
 
 .mission_front{
@@ -377,6 +375,7 @@ border-radius: 10px 0px 0px 10px;
 background-color:#051094;
 color:white;
 border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
 }
 
 
@@ -392,6 +391,7 @@ border-radius: 10px 0px 0px 10px;
 background-color:#710193;
 color:white;
 border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
 }
 
 
@@ -400,6 +400,7 @@ border-radius: 0px 10px 10px 0px;
 background-color:#ff6289;
 color:white;
 border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
 }
 
 
@@ -623,7 +624,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   
   
   
-  
+  <!--https://www.quora.com/I-want-to-put-two-divs-in-HTML-in-the-same-line-but-one-always-comes-under-the-other-one-What-should-I-do-->
   <div class= "card-container">
   <!--stationary card-->
      <div class="flip-cardb mission_left">
@@ -669,123 +670,133 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 <br/>
 
 
-
-
-<!--stationary card-->
-     <div class="flip-cardb story_left">
- <div class="flip-card-inner "> 
- <div class="flip-card-front story_left">
- </div>
- </div>
- </div>
- <!--stationary card-->
-
-
-<!--moving card-->
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-    <br/>
-    <br/>
-    <br/>
-      <p style="color: #34e2e2;
-  font-family:Inconsolata, monospace;">AboutStory()</p>
+<div class= "card-container">
+  <!--stationary card-->
+  <div class="flip-cardb story_left">
+    <div class="flip-card-inner "> 
+    <div class="flip-card-front story_left">
     </div>
-    <div class="flip-card-back">
-      <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
     </div>
-  </div>
+    </div>
+    <!--stationary card-->
+   
+   
+   <!--moving card-->
+   <div class="flip-card">
+     <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <br/>
+       <br/>
+       <br/>
+         <p style="color: #34e2e2;
+     font-family:Inconsolata, monospace;">AboutStory()</p>
+       </div>
+       <div class="flip-card-back">
+         <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
+       </div>
+     </div>
+   </div>
+   <!--moving card-->
+   <!--stationary card-->
+        <div class="flip-cardb">
+    <div class="flip-card-inner-right "> 
+    <div class="flip-card-front story_right">
+    </div>
+    </div>
+    </div>
+    <!--stationary card-->
 </div>
-<!--moving card-->
-<!--stationary card-->
-     <div class="flip-cardb">
- <div class="flip-card-inner-right "> 
- <div class="flip-card-front story_right">
- </div>
- </div>
- </div>
- <!--stationary card-->
+
+
 <br/>
 <br/>
 
 
-
-
-
-
-<!--stationary card-->
-     <div class="flip-cardb fam_left">
- <div class="flip-card-inner "> 
- <div class="flip-card-front fam_left">
- </div>
- </div>
- </div>
- <!--stationary card-->
-
-
-<!--moving card-->
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-    <br/>
-    <br/>
-    <br/>
-      <p style="color: #ad7fa8;
-  font-family:Inconsolata, monospace;">AboutFamily()</p>
+<div class= "card-container">
+  <!--stationary card-->
+  <div class="flip-cardb fam_left">
+    <div class="flip-card-inner "> 
+    <div class="flip-card-front fam_left">
     </div>
-    <div class="flip-card-back">
-      <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife and I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
     </div>
-  </div>
+    </div>
+    <!--stationary card-->
+   
+   
+   <!--moving card-->
+   <div class="flip-card">
+     <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <br/>
+       <br/>
+       <br/>
+         <p style="color: #ad7fa8;
+     font-family:Inconsolata, monospace;">AboutFamily()</p>
+       </div>
+       <div class="flip-card-back">
+         <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife and I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
+       </div>
+     </div>
+   </div>
+   <!--moving card-->
+   <!--stationary card-->
+        <div class="flip-cardb">
+    <div class="flip-card-inner-right "> 
+    <div class="flip-card-front fam_right">
+    </div>
+    </div>
+    </div>
+    <!--stationary card-->
 </div>
-<!--moving card-->
-<!--stationary card-->
-     <div class="flip-cardb">
- <div class="flip-card-inner-right "> 
- <div class="flip-card-front fam_right">
- </div>
- </div>
- </div>
- <!--stationary card-->
+
+
+
+
 
 <br/>
 <br/>
 
-<!--stationary card-->
-     <div class="flip-cardb hobbies_left">
- <div class="flip-card-inner "> 
- <div class="flip-card-front hobbies_left">
- </div>
- </div>
- </div>
- <!--stationary card-->
 
 
-<!--moving card-->
-<div class="flip-card ">
-  <div class="flip-card-inner">
-    <div class="flip-card-front ">
-    <br/>
-    <br/>
-    <br/>
-      <p style="color: #F59784;
-  font-family:Inconsolata, monospace;">AboutHobbies()</p>
+<div class= "card-container">
+  <!--stationary card-->
+  <div class="flip-cardb hobbies_left">
+    <div class="flip-card-inner "> 
+    <div class="flip-card-front hobbies_left">
     </div>
-    <div class="flip-card-back">
-      <p class="about-entry">  
-In addition to learning programming languages in my free time, I also enjoy learning new human languages, traveling, writing stories, or entertaining myself with television. </p> 
     </div>
-  </div>
+    </div>
+    <!--stationary card-->
+   
+   
+   <!--moving card-->
+   <div class="flip-card ">
+     <div class="flip-card-inner">
+       <div class="flip-card-front ">
+       <br/>
+       <br/>
+       <br/>
+         <p style="color: #F59784;
+     font-family:Inconsolata, monospace;">AboutHobbies()</p>
+       </div>
+       <div class="flip-card-back">
+         <p class="about-entry">  
+   In addition to learning programming languages in my free time, I also enjoy learning new human languages, traveling, writing stories, or entertaining myself with television. </p> 
+       </div>
+     </div>
+   </div>
+   <!--moving card-->
+   <!--stationary card-->
+        <div class="flip-cardb">
+    <div class="flip-card-inner-right "> 
+    <div class="flip-card-front hobbies_right">
+    </div>
+    </div>
+    </div>
+    <!--stationary card-->
 </div>
-<!--moving card-->
-<!--stationary card-->
-     <div class="flip-cardb">
- <div class="flip-card-inner-right "> 
- <div class="flip-card-front hobbies_right">
- </div>
- </div>
- </div>
- <!--stationary card-->
+
+
 <br/>
 <br/>
 <br/>

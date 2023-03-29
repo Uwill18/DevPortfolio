@@ -81,9 +81,9 @@ margin-top:5.5%;
 
 
 #About{
-/*background-color:#00F;*/
-height:800px;
-width:940px;
+
+height:100%;
+width:100%;
 
 }
 
@@ -613,11 +613,13 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 
 
 
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
-<body>
+<body id="Invert">
+
 
 
 <div class="tab">
@@ -849,9 +851,21 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 </div>
 <br/>
 <br/>
+<div class="card-container">
+<button onclick="Day()">Day</button>
+<button onclick="Night()">Night</button>
+</div>
+
 
 
 </div>
+</div>
+
+
+
+
+
+
 
 </div>
 
@@ -1192,6 +1206,20 @@ $(".animated-progress span").each(function () {
 });
 </script>
 <!---JQuery for Skills--->
+<!--Night/Day switch-->
+<script>
+       function Day()
+        {
+            document.getElementById("Invert").style.backgroundColor="white";
+            document.getElementById("Invert").style.color="black";
+        }
+        function Night()
+        {
+            document.getElementById("Invert").style.backgroundColor="black";
+            document.getElementById("Invert").style.color="white";
+        }
+</script>
+<!---->
 
 </body>
 </html> 

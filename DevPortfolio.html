@@ -341,7 +341,6 @@ padding:16px 32px;
 .flip-card-back {
   background-color: #313639;
   color: white;
-  
   transform: rotateX(180deg);
 }
 
@@ -351,7 +350,6 @@ padding:16px 32px;
   width: 75px;
   height: 200px;
   display:inline-block;
-  
 }
 
 
@@ -377,6 +375,8 @@ font-family:Inconsolata, monospace;
 justify-content: center;
 }
 
+
+
 .story_left{
 background-color:#051094;
 color:white;
@@ -389,6 +389,12 @@ background-color:#051094;
 color:white;
 border-radius: 0px 10px 10px 0px;
 white-space: nowrap;
+}
+
+.story_front{
+  color: #34e2e2;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
 }
 
 
@@ -407,6 +413,12 @@ border-radius: 0px 10px 10px 0px;
 white-space: nowrap;
 }
 
+.fam_front{
+  color: #ad7fa8;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
+}
+
 
 
 .hobbies_right{
@@ -421,6 +433,12 @@ white-space: nowrap;
 background-color:#ff6289;
 color:white;
 border-radius: 10px 0px 0px 10px;
+}
+
+.hobbies_front{
+  color:#F59784;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
 }
 
 
@@ -696,12 +714,11 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
    <!--moving card-->
    <div class="flip-card">
      <div class="flip-card-inner">
-       <div class="flip-card-front">
+       <div class="flip-card-front story_front">
        <br/>
        <br/>
        <br/>
-         <p style="color: #34e2e2;
-     font-family:Inconsolata, monospace;">AboutStory()</p>
+         <p>AboutStory()</p>
        </div>
        <div class="flip-card-back">
          <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
@@ -738,12 +755,11 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
    <!--moving card-->
    <div class="flip-card">
      <div class="flip-card-inner">
-       <div class="flip-card-front">
+       <div class="flip-card-front fam_front">
        <br/>
        <br/>
        <br/>
-         <p style="color: #ad7fa8;
-     font-family:Inconsolata, monospace;">AboutFamily()</p>
+         <p>AboutFamily()</p>
        </div>
        <div class="flip-card-back">
          <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife and I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
@@ -784,12 +800,11 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
    <!--moving card-->
    <div class="flip-card ">
      <div class="flip-card-inner">
-       <div class="flip-card-front ">
+       <div class="flip-card-front hobbies_front">
        <br/>
        <br/>
        <br/>
-         <p style="color: #F59784;
-     font-family:Inconsolata, monospace;">AboutHobbies()</p>
+         <p>AboutHobbies()</p>
        </div>
        <div class="flip-card-back">
          <p class="about-entry">  

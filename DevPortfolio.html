@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,6 +92,7 @@ width:100%;
 .AboutHeading{
   color: #39ff14;
   font-family:Inconsolata, monospace;
+  width:740px;
   border-style: dotted;
   border-radius: 10px;
   text-align: center;
@@ -462,9 +465,10 @@ width:940px;
 
 .container{
 display:block;
- position: absolute;
+ position: relative;
         left: 30%;
         margin-right: -30%;
+  
 }
 
 
@@ -610,6 +614,14 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   }
 }
 
+#aboutopen{
+  
+  display:block;
+ position: relative;
+        right: 30%;
+        /*margin-left: 45%;*/
+}
+
 
 
 
@@ -618,7 +630,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
-<body id="Invert">
+<body id="">
 
 
 
@@ -648,16 +660,17 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   
 </div>
 
+<div id="Invert">
+<div id="About"  class="tabcontent container">
+<span id="aboutopen" style="font-size:30px;cursor:pointer;color: #39ff14;" onclick="openNav()">&#9776; open</span>
 
-<div id="About" class="tabcontent darkmode">
-<span style="font-size:30px;cursor:pointer;color: #39ff14;" onclick="openNav()">&#9776; open</span>
-<div class = "container">
       <h2 class="AboutHeading">About Me</h2>
   
+      
   
   
   <!--https://www.quora.com/I-want-to-put-two-divs-in-HTML-in-the-same-line-but-one-always-comes-under-the-other-one-What-should-I-do-->
-  <div class= "card-container">
+  <div class= "card-container ">
   <!--stationary card-->
      <div class="flip-cardb mission_left">
  <div class="flip-card-inner "> 
@@ -849,6 +862,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   <br/>
   <p> ― Mahatma Ghandi</p>
 </div>
+
+
+<br/>
 <br/>
 <br/>
 <div class="card-container">
@@ -867,6 +883,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 
 
 
+</div>
 </div>
 
 
@@ -1212,6 +1229,7 @@ $(".animated-progress span").each(function () {
         {
             document.getElementById("Invert").style.backgroundColor="white";
             document.getElementById("Invert").style.color="black";
+            
         }
         function Night()
         {
@@ -1223,7 +1241,5 @@ $(".animated-progress span").each(function () {
 
 </body>
 </html> 
-
-
 
 

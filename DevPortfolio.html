@@ -99,6 +99,18 @@ width:100%;
   padding: 15px;
 }
 
+.AboutHeadingLight{
+  color: black;
+  background-color: #39ff14;;
+  font-family:Inconsolata, monospace;
+  width:740px;
+  border-style: dotted;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+
+}
+
 .about-entry{
  font-size: 16px;
  justify-content: center;
@@ -664,7 +676,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 <div id="About"  class="tabcontent container">
 <span id="aboutopen" style="font-size:30px;cursor:pointer;color: #39ff14;" onclick="openNav()">&#9776; open</span>
 
-      <h2 class="AboutHeading">About Me</h2>
+      <h2 id="AHL" class="AboutHeading">About Me</h2>
   
       
   
@@ -1229,12 +1241,15 @@ $(".animated-progress span").each(function () {
         {
             document.getElementById("Invert").style.backgroundColor="white";
             document.getElementById("Invert").style.color="black";
+            document.getElementById("AHL").setAttribute("class", "AboutHeadingLight"); 
+            
             
         }
         function Night()
         {
             document.getElementById("Invert").style.backgroundColor="black";
             document.getElementById("Invert").style.color="white";
+            document.getElementById("AHL").setAttribute("class", "AboutHeading"); 
         }
 </script>
 <!---->

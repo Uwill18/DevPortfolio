@@ -647,9 +647,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 }
 
 .mission_left_lite{
-background-color:#C73866;
+background-color:red;
 border-radius: 10px 0px 0px 10px;
-border-color: #000;
+
 }
 
 .mission_right_lite{
@@ -784,44 +784,47 @@ white-space: nowrap;
   
   
   <!--https://www.quora.com/I-want-to-put-two-divs-in-HTML-in-the-same-line-but-one-always-comes-under-the-other-one-What-should-I-do-->
-  <div class= "card-container ">
+  
   <!--stationary card-->
-     <div  class="flip-cardb">
- <div class="flip-card-inner "> 
- <div id="MLL" class="flip-card-front mission_left">
- </div>
- </div>
- </div>
- <!--stationary card-->
 
 
-<!--moving card-->
-<div  class="flip-card">
-  <div class="flip-card-inner">
-    <div id="MFL" class="flip-card-front mission_front">
-    <br/>
-    <br/>
-    <br/>
-      <p>AboutMission()</p>
-    </div>
-    <div class="flip-card-back">
-      <p class="about-entry"> Engineering excellence tailored to each client's vision through the integration of my experiences in art, psychology, and computer science. </p> 
-    </div>
+  <div class= "card-container">
+    <!--stationary card-->
+    <div class="flip-cardb">
+      <div class="flip-card-inner "> 
+      <div id="MLL" class="flip-card-front mission_left">
+      </div>
+      </div>
+      </div>
+      <!--stationary card-->
+     
+     
+     <!--moving card-->
+     <div class="flip-card">
+       <div class="flip-card-inner">
+         <div id="MFL" class="flip-card-front mission_front">
+         <br/>
+         <br/>
+         <br/>
+           <p>AboutMission()</p>
+         </div>
+         <div class="flip-card-back">
+           <p class="about-entry">  I have been coding since about the eighth grade, and have been practicing in my spare time with a variety of languages for about ten years now. I am presently a college student at Western Governor's University, and I'm excited that I only have two terms left to complete my computer science degree! Further, I have recently solidified my foundational knowledge of the MERN stack by graduating from the coding bootcamp known as Nucamp, and I look forward to applying these skills in a corporate setting. </p> 
+         </div>
+       </div>
+     </div>
+     <!--moving card-->
+     <!--stationary card-->
+          <div  class="flip-cardb">
+      <div class="flip-card-inner-right "> 
+      <div id="MRL" class="flip-card-front mission_right">
+      </div>
+      </div>
+      </div>
+      <!--stationary card-->
   </div>
-</div>
-<!--moving card-->
-
-
-
-<!--stationary card-->
-     <div class="flip-cardb">
- <div class="flip-card-inner-right "> 
- <div  id="MRL" class="flip-card-front mission_right">
- </div>
- </div>
- </div>
- <!--stationary card-->
-  </div>
+ 
+ 
   
 
 
@@ -832,7 +835,7 @@ white-space: nowrap;
 
 <div class= "card-container">
   <!--stationary card-->
-  <div class="flip-cardb story_left">
+  <div class="flip-cardb">
     <div class="flip-card-inner "> 
     <div id="SLL" class="flip-card-front story_left">
     </div>
@@ -983,8 +986,8 @@ white-space: nowrap;
 <br/>
 <br/>
 <div class="card-container">
-<button onclick="Day()">Day</button>
-<button onclick="Night()">Night</button>
+<!-- <button onclick="Day()">Day</button>
+<button onclick="Night()">Night</button> -->
 </div>
 
 
@@ -1347,8 +1350,22 @@ $(".animated-progress span").each(function () {
             document.getElementById("AHL").setAttribute("class", "AboutHeadingLight"); 
 
             //document.getElementById("FCFL").setAttribute("class", "flip-card-front-lite");
+
+
+            const frontcardCollection = document.getElementsByClassName("flip-card-front");
+              for (let i = 0; i < frontcardCollection.length; i++) {
+                       frontcardCollection[i].style.backgroundColor = "white";
+                      }
+
+            const backcardCollection = document.getElementsByClassName("flip-card-back");
+              for (let i = 0; i < backcardCollection.length; i++) {
+                       backcardCollection[i].style.backgroundColor = "white";
+                       backcardCollection[i].style.color = "black";
+                      }
+
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
             document.getElementById("MLL").setAttribute("class", "mission_left_lite"); 
+           
             document.getElementById("MRL").setAttribute("class", "mission_right_lite"); 
             document.getElementById("MFL").setAttribute("class", "mission_front_lite"); 
             document.getElementById("SLL").setAttribute("class", "story_left_lite"); 

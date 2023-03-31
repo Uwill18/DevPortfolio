@@ -635,6 +635,108 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 }
 
 
+.flip-card-front-lite {
+  background-color: #F8F8FF;
+  
+}
+
+.flip-card-back-lite {
+  background-color: #F8F8FF;
+  color: black;
+  transform: rotateX(180deg);
+}
+
+.mission_left_lite{
+background-color:#C73866;
+border-radius: 10px 0px 0px 10px;
+border-color: #000;
+}
+
+.mission_right_lite{
+background-color:#C73866;
+border-radius: 10px 0px 0px 10px;
+border-color: #000;
+}
+
+.mission_front_lite{
+color: #C73866;
+font-family:Inconsolata, monospace;
+justify-content: center;
+}
+
+.story_left_lite{
+background-color:#FD8F52;
+border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
+}
+
+.story_right_lite{
+background-color:#FD8F52;
+border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
+}
+
+
+.story_front_lite{
+  color: #FD8F52;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
+}
+
+
+.fam_left_lite{
+background-color:#FFBD71;
+border-radius: 10px 0px 0px 10px;
+}
+
+
+.fam_right_lite{
+background-color:#FFBD71;
+border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
+}
+
+.fam_front_lite{
+  color: #FFBD71;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
+}
+
+
+.hobbies_left_lite{
+background-color:#BB8252;
+border-radius: 10px 0px 0px 10px;
+}
+
+
+.hobbies_right_lite{
+background-color:#BB8252;
+border-radius: 0px 10px 10px 0px;
+white-space: nowrap;
+}
+
+
+.hobbies_front_lite{
+  color:#462F1B;
+  font-family:Inconsolata, monospace;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -684,9 +786,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   <!--https://www.quora.com/I-want-to-put-two-divs-in-HTML-in-the-same-line-but-one-always-comes-under-the-other-one-What-should-I-do-->
   <div class= "card-container ">
   <!--stationary card-->
-     <div class="flip-cardb mission_left">
+     <div  class="flip-cardb">
  <div class="flip-card-inner "> 
- <div class="flip-card-front mission_left">
+ <div id="MLL" class="flip-card-front mission_left">
  </div>
  </div>
  </div>
@@ -694,9 +796,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 
 
 <!--moving card-->
-<div class="flip-card">
+<div  class="flip-card">
   <div class="flip-card-inner">
-    <div class="flip-card-front mission_front">
+    <div id="MFL" class="flip-card-front mission_front">
     <br/>
     <br/>
     <br/>
@@ -714,12 +816,13 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
 <!--stationary card-->
      <div class="flip-cardb">
  <div class="flip-card-inner-right "> 
- <div class="flip-card-front mission_right">
+ <div  id="MRL" class="flip-card-front mission_right">
  </div>
  </div>
  </div>
  <!--stationary card-->
   </div>
+  
 
 
 
@@ -731,7 +834,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   <!--stationary card-->
   <div class="flip-cardb story_left">
     <div class="flip-card-inner "> 
-    <div class="flip-card-front story_left">
+    <div id="SLL" class="flip-card-front story_left">
     </div>
     </div>
     </div>
@@ -741,7 +844,7 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
    <!--moving card-->
    <div class="flip-card">
      <div class="flip-card-inner">
-       <div class="flip-card-front story_front">
+       <div id="SFL" class="flip-card-front story_front">
        <br/>
        <br/>
        <br/>
@@ -754,9 +857,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
    </div>
    <!--moving card-->
    <!--stationary card-->
-        <div class="flip-cardb">
+        <div  class="flip-cardb">
     <div class="flip-card-inner-right "> 
-    <div class="flip-card-front story_right">
+    <div id="" class="flip-card-front story_right">
     </div>
     </div>
     </div>
@@ -1242,6 +1345,22 @@ $(".animated-progress span").each(function () {
             document.getElementById("Invert").style.backgroundColor="white";
             document.getElementById("Invert").style.color="black";
             document.getElementById("AHL").setAttribute("class", "AboutHeadingLight"); 
+
+            //document.getElementById("FCFL").setAttribute("class", "flip-card-front-lite");
+            //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
+            document.getElementById("MLL").setAttribute("class", "mission_left_lite"); 
+            document.getElementById("MRL").setAttribute("class", "mission_right_lite"); 
+            document.getElementById("MFL").setAttribute("class", "mission_front_lite"); 
+            document.getElementById("SLL").setAttribute("class", "story_left_lite"); 
+            document.getElementById("SRL").setAttribute("class", "story_right_lite"); 
+            document.getElementById("SFL").setAttribute("class", "story_front_lite");
+            document.getElementById("FLL").setAttribute("class", "fam_left_lite"); 
+            document.getElementById("FRL").setAttribute("class", "fam_right_lite"); 
+            document.getElementById("FFL").setAttribute("class", "fam_front_lite"); 
+            document.getElementById("HLL").setAttribute("class", "hobbies_left_lite"); 
+            document.getElementById("HRL").setAttribute("class", "hobbies_right_lite"); 
+            document.getElementById("HFL").setAttribute("class", "hobbies_front_lite"); 
+
             
             
         }
@@ -1250,6 +1369,21 @@ $(".animated-progress span").each(function () {
             document.getElementById("Invert").style.backgroundColor="black";
             document.getElementById("Invert").style.color="white";
             document.getElementById("AHL").setAttribute("class", "AboutHeading"); 
+
+            document.getElementById("FCFL").setAttribute("class", "flip-card-front");
+            document.getElementById("FCBL").setAttribute("class", "flip-card-back");  
+            document.getElementById("MLL").setAttribute("class", "mission_left"); 
+            document.getElementById("MRL").setAttribute("class", "mission_right"); 
+            document.getElementById("MFL").setAttribute("class", "mission_front"); 
+            document.getElementById("SLL").setAttribute("class", "story_left"); 
+            document.getElementById("SRL").setAttribute("class", "story_right"); 
+            document.getElementById("SFL").setAttribute("class", "story_front");
+            document.getElementById("FLL").setAttribute("class", "fam_left"); 
+            document.getElementById("FRL").setAttribute("class", "fam_right"); 
+            document.getElementById("FFL").setAttribute("class", "fam_front"); 
+            document.getElementById("HLL").setAttribute("class", "hobbies_left"); 
+            document.getElementById("HRL").setAttribute("class", "hobbies_right"); 
+            document.getElementById("HFL").setAttribute("class", "hobbies_front"); 
         }
 </script>
 <!---->

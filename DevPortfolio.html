@@ -368,13 +368,17 @@ padding:16px 32px;
 }
 
 
-
-
-.mission_left{
-background-color:#00AB41;
+#MLL{
+  background-color:#00AB41;
 color:white;
 border-radius: 10px 0px 0px 10px;
 }
+
+/* .mission_left{
+background-color:#00AB41;
+color:white;
+border-radius: 10px 0px 0px 10px;
+} */
 
 
 .mission_right{
@@ -792,7 +796,7 @@ white-space: nowrap;
     <!--stationary card-->
     <div class="flip-cardb">
       <div class="flip-card-inner "> 
-      <div id="MLL" class="flip-card-front mission_left">
+      <div id="MLL" class="flip-card-front">
       </div>
       </div>
       </div>
@@ -986,8 +990,8 @@ white-space: nowrap;
 <br/>
 <br/>
 <div class="card-container">
-<!-- <button onclick="Day()">Day</button>
-<button onclick="Night()">Night</button> -->
+<button onclick="Day()">Day</button>
+<button onclick="Night()">Night</button> 
 </div>
 
 
@@ -1368,7 +1372,7 @@ $(".animated-progress span").each(function () {
                       }
 
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
-            document.getElementById("MLL").setAttribute("class", "mission_left_lite"); 
+            document.getElementById("MLL").style.backgroundColor="red";
            
             document.getElementById("MRL").setAttribute("class", "mission_right_lite"); 
             document.getElementById("MFL").setAttribute("class", "mission_front_lite"); 

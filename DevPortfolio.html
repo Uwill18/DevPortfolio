@@ -1342,14 +1342,18 @@ $(".animated-progress span").each(function () {
 </script>
 <!---JQuery for Skills--->
 <!--Night/Day switch-->
+<!--https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_setattribute1-->
+<!-- https://www.w3schools.com/js/js_htmldom_collections.asp -->
 <script>
        function Day()
         {
+          
             document.getElementById("Invert").style.backgroundColor="white";
             document.getElementById("Invert").style.color="black";
             document.getElementById("AHL").setAttribute("class", "AboutHeadingLight"); 
 
             //document.getElementById("FCFL").setAttribute("class", "flip-card-front-lite");
+            
 
 
             const frontcardCollection = document.getElementsByClassName("flip-card-front");

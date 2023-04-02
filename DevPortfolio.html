@@ -907,7 +907,10 @@ white-space: nowrap;
          <p>AboutFamily()</p>
        </div>
        <div class="flip-card-back">
-         <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife & I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
+         <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife & I met nearly ten years 
+          ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. 
+          One of which is a toddler, and the other is <span id="timer"></span> months old! 
+          I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
        </div>
      </div>
    </div>
@@ -1449,6 +1452,34 @@ $(".animated-progress span").each(function () {
         }
 </script>
 <!---->
+<!--https://codepen.io/RyanNiu/pen/GNYbwY-->
+<!--CountUp timer-->
+<script>
+  function updateTimer() {
+	// yyyy-MM-dd HH:mm:ss
+  past  = Date.parse("2023-03-14 01:23:00");
+  now     = new Date();
+  diff    = now - past;
+
+  years  = Math.floor( diff / (1000*60*60*24*30*12) );
+  months = Math.floor( diff / (1000*60*60*24*30) );
+  days   = Math.floor( diff / (1000*60*60*24) );
+  hours  = Math.floor( diff / (1000*60*60) );
+  mins   = Math.floor( diff / (1000*60) );
+  secs   = Math.floor( diff / 1000 );
+
+  y = years;
+  M = months - years  * 12;
+  d = days   - months * 30;
+  h = hours  - days   * 24;
+  m = mins   - hours  * 60;
+  s = secs   - mins   * 60;
+  document.getElementById("timer")
+    .innerHTML = M ;
+}
+setInterval('updateTimer()', 1000 );
+</script>
+<!--CountUp timer-->
 
 </body>
 </html> 

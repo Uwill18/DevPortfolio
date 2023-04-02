@@ -324,6 +324,7 @@ padding:16px 32px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px 0px 0px 10px;
 }
 
 .flip-card-inner-right {
@@ -335,6 +336,8 @@ padding:16px 32px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 0px 10px 10px 0px;
+  
 }
 
 .flip-card:hover .flip-card-inner {
@@ -353,6 +356,11 @@ padding:16px 32px;
   background-color: #313639;
 }
 
+.left-flip-card-front {
+  border-radius: 10px 0px 0px 10px;
+  
+}
+
 .flip-card-back {
   background-color: #313639;
   color: white;
@@ -365,6 +373,7 @@ padding:16px 32px;
   width: 75px;
   height: 200px;
   display:inline-block;
+  border-radius: 10px 0px 0px 10px;
 }
 
 
@@ -794,9 +803,12 @@ white-space: nowrap;
 
   <div class= "card-container">
     <!--stationary card-->
-    <div class="flip-cardb">
+    
+    <div class="flip-cardb ">
+      
       <div class="flip-card-inner "> 
-      <div id="MLL" class="flip-card-front">
+        <div id="MLL" class="flip-card-front">
+      
       </div>
       </div>
       </div>
@@ -1373,6 +1385,7 @@ $(".animated-progress span").each(function () {
 
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
             document.getElementById("MLL").style.backgroundColor="red";
+            
            
             document.getElementById("MRL").setAttribute("class", "mission_right_lite"); 
             document.getElementById("MFL").setAttribute("class", "mission_front_lite"); 

@@ -383,11 +383,11 @@ color:white;
 border-radius: 10px 0px 0px 10px;
 }
 
-/* .mission_left{
+.mission_left{
 background-color:#00AB41;
 color:white;
 border-radius: 10px 0px 0px 10px;
-} */
+} 
 
 
 .mission_right{
@@ -1382,8 +1382,8 @@ $(".animated-progress span").each(function () {
             document.getElementById("MLL").style.backgroundColor="red";
             
            
-            document.getElementById("MRL").setAttribute("class", "mission_right_lite"); 
-            document.getElementById("MFL").setAttribute("class", "mission_front_lite"); 
+            document.getElementById("MRL").style.backgroundColor="red"; 
+            document.getElementById("MFL").style.color="red"; 
             document.getElementById("SLL").setAttribute("class", "story_left_lite"); 
             document.getElementById("SRL").setAttribute("class", "story_right_lite"); 
             document.getElementById("SFL").setAttribute("class", "story_front_lite");
@@ -1403,11 +1403,24 @@ $(".animated-progress span").each(function () {
             document.getElementById("Invert").style.color="white";
             document.getElementById("AHL").setAttribute("class", "AboutHeading"); 
 
-            document.getElementById("FCFL").setAttribute("class", "flip-card-front");
-            document.getElementById("FCBL").setAttribute("class", "flip-card-back");  
-            document.getElementById("MLL").setAttribute("class", "mission_left"); 
-            document.getElementById("MRL").setAttribute("class", "mission_right"); 
-            document.getElementById("MFL").setAttribute("class", "mission_front"); 
+            const frontcardCollection = document.getElementsByClassName("flip-card-front");
+              for (let i = 0; i < frontcardCollection.length; i++) {
+                       frontcardCollection[i].style.backgroundColor = "#313639";
+                      }
+
+            const backcardCollection = document.getElementsByClassName("flip-card-back");
+              for (let i = 0; i < backcardCollection.length; i++) {
+                       backcardCollection[i].style.backgroundColor = "#313639";
+                       backcardCollection[i].style.color = "white";
+                      }
+
+           // document.getElementById("FCFL").setAttribute("class", "flip-card-front");
+            //document.getElementById("FCBL").setAttribute("class", "flip-card-back");  
+
+            //document.getElementById("MLL").setAttribute("class", "mission_left"); 
+            document.getElementById("MLL").style.backgroundColor="#00AB41";
+            document.getElementById("MRL").style.backgroundColor="#00AB41"; 
+            document.getElementById("MFL").style.color="#39ff14"; 
             document.getElementById("SLL").setAttribute("class", "story_left"); 
             document.getElementById("SRL").setAttribute("class", "story_right"); 
             document.getElementById("SFL").setAttribute("class", "story_front");

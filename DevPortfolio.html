@@ -888,7 +888,7 @@ white-space: nowrap;
 
 <div class= "card-container">
   <!--stationary card-->
-  <div class="flip-cardb fam_left">
+  <div class="flip-cardb">
     <div class="flip-card-inner "> 
     <div id="FLL" class="flip-card-front fam_left">
     </div>
@@ -907,7 +907,7 @@ white-space: nowrap;
          <p>AboutFamily()</p>
        </div>
        <div class="flip-card-back">
-         <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife and I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
+         <p class="about-entry">  One of my top motivators for giving my all in the workplace is my family. My wife & I met nearly ten years ago in college and we have been married now for five years. Since then we've added two precious baby girls to our family. One of which is a toddler, and the other is x months old! I am their support, and I look forward to helping each of them sustain the bright futures ahead of them. </p> 
        </div>
      </div>
    </div>
@@ -934,7 +934,7 @@ white-space: nowrap;
 
 <div class= "card-container">
   <!--stationary card-->
-  <div class="flip-cardb hobbies_left">
+  <div class="flip-cardb">
     <div class="flip-card-inner "> 
     <div id="HLL" class="flip-card-front hobbies_left">
     </div>
@@ -1382,6 +1382,11 @@ $(".animated-progress span").each(function () {
                        backcardCollection[i].style.borderColor = "black";
                       }
 
+            const QuoteText = document.getElementsByClassName("quote-text");
+              for (let i = 0; i < QuoteText.length; i++) {
+                       QuoteText[i].style.color = "white";
+                      }
+
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
             document.getElementById("MLL").style.backgroundColor="#990000";
             
@@ -1418,6 +1423,9 @@ $(".animated-progress span").each(function () {
                        backcardCollection[i].style.color = "white";
                       }
 
+
+          
+
            // document.getElementById("FCFL").setAttribute("class", "flip-card-front");
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back");  
 
@@ -1434,6 +1442,7 @@ $(".animated-progress span").each(function () {
             document.getElementById("HLL").style.backgroundColor="#ff6289"; 
             document.getElementById("HRL").style.backgroundColor="#ff6289"; 
             document.getElementById("HFL").style.color="#F59784"; 
+            //document.getElementsByClassName("quote-text").style.color="white";
  
 
       

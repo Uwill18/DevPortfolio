@@ -354,6 +354,7 @@ padding:16px 32px;
 
 .flip-card-front {
   background-color: #313639;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .left-flip-card-front {
@@ -365,6 +366,7 @@ padding:16px 32px;
   background-color: #313639;
   color: white;
   transform: rotateX(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -872,7 +874,7 @@ white-space: nowrap;
    <!--stationary card-->
         <div  class="flip-cardb">
     <div class="flip-card-inner-right "> 
-    <div id="" class="flip-card-front story_right">
+    <div id="SRL" class="flip-card-front story_right">
     </div>
     </div>
     </div>
@@ -888,7 +890,7 @@ white-space: nowrap;
   <!--stationary card-->
   <div class="flip-cardb fam_left">
     <div class="flip-card-inner "> 
-    <div class="flip-card-front fam_left">
+    <div id="FLL" class="flip-card-front fam_left">
     </div>
     </div>
     </div>
@@ -898,7 +900,7 @@ white-space: nowrap;
    <!--moving card-->
    <div class="flip-card">
      <div class="flip-card-inner">
-       <div class="flip-card-front fam_front">
+       <div id="FFL" class="flip-card-front fam_front">
        <br/>
        <br/>
        <br/>
@@ -914,7 +916,7 @@ white-space: nowrap;
    <!--stationary card-->
         <div class="flip-cardb">
     <div class="flip-card-inner-right "> 
-    <div class="flip-card-front fam_right">
+    <div id="FRL" class="flip-card-front fam_right">
     </div>
     </div>
     </div>
@@ -934,7 +936,7 @@ white-space: nowrap;
   <!--stationary card-->
   <div class="flip-cardb hobbies_left">
     <div class="flip-card-inner "> 
-    <div class="flip-card-front hobbies_left">
+    <div id="HLL" class="flip-card-front hobbies_left">
     </div>
     </div>
     </div>
@@ -944,7 +946,7 @@ white-space: nowrap;
    <!--moving card-->
    <div class="flip-card ">
      <div class="flip-card-inner">
-       <div class="flip-card-front hobbies_front">
+       <div id="HFL" class="flip-card-front hobbies_front">
        <br/>
        <br/>
        <br/>
@@ -960,7 +962,7 @@ white-space: nowrap;
    <!--stationary card-->
         <div class="flip-cardb">
     <div class="flip-card-inner-right "> 
-    <div class="flip-card-front hobbies_right">
+    <div id="HRL" class="flip-card-front hobbies_right">
     </div>
     </div>
     </div>
@@ -1369,30 +1371,32 @@ $(".animated-progress span").each(function () {
 
             const frontcardCollection = document.getElementsByClassName("flip-card-front");
               for (let i = 0; i < frontcardCollection.length; i++) {
-                       frontcardCollection[i].style.backgroundColor = "white";
+                       frontcardCollection[i].style.backgroundColor = "#F8F8FF";
+                       frontcardCollection[i].style.borderColor = "black";
                       }
 
             const backcardCollection = document.getElementsByClassName("flip-card-back");
               for (let i = 0; i < backcardCollection.length; i++) {
-                       backcardCollection[i].style.backgroundColor = "white";
+                       backcardCollection[i].style.backgroundColor = "#F8F8FF";
                        backcardCollection[i].style.color = "black";
+                       backcardCollection[i].style.borderColor = "black";
                       }
 
             //document.getElementById("FCBL").setAttribute("class", "flip-card-back-lite");  
-            document.getElementById("MLL").style.backgroundColor="red";
+            document.getElementById("MLL").style.backgroundColor="#990000";
             
            
-            document.getElementById("MRL").style.backgroundColor="red"; 
-            document.getElementById("MFL").style.color="red"; 
-            document.getElementById("SLL").setAttribute("class", "story_left_lite"); 
-            document.getElementById("SRL").setAttribute("class", "story_right_lite"); 
-            document.getElementById("SFL").setAttribute("class", "story_front_lite");
-            document.getElementById("FLL").setAttribute("class", "fam_left_lite"); 
-            document.getElementById("FRL").setAttribute("class", "fam_right_lite"); 
-            document.getElementById("FFL").setAttribute("class", "fam_front_lite"); 
-            document.getElementById("HLL").setAttribute("class", "hobbies_left_lite"); 
-            document.getElementById("HRL").setAttribute("class", "hobbies_right_lite"); 
-            document.getElementById("HFL").setAttribute("class", "hobbies_front_lite"); 
+            document.getElementById("MRL").style.backgroundColor="#990000"; 
+            document.getElementById("MFL").style.color="#DB0F27"; 
+            document.getElementById("SLL").style.backgroundColor="#FD8F52";
+            document.getElementById("SRL").style.backgroundColor="#FD8F52"; 
+            document.getElementById("SFL").style.color="#FD8F52";
+            document.getElementById("FLL").style.backgroundColor="#FFBD71"; 
+            document.getElementById("FRL").style.backgroundColor="#FFBD71"; 
+            document.getElementById("FFL").style.color="#FFBD71"; 
+            document.getElementById("HLL").style.backgroundColor="#BB8252"; 
+            document.getElementById("HRL").style.backgroundColor="#BB8252"; 
+            document.getElementById("HFL").style.color="#462F1B"; 
 
             
             
@@ -1420,16 +1424,19 @@ $(".animated-progress span").each(function () {
             //document.getElementById("MLL").setAttribute("class", "mission_left"); 
             document.getElementById("MLL").style.backgroundColor="#00AB41";
             document.getElementById("MRL").style.backgroundColor="#00AB41"; 
-            document.getElementById("MFL").style.color="#39ff14"; 
-            document.getElementById("SLL").setAttribute("class", "story_left"); 
-            document.getElementById("SRL").setAttribute("class", "story_right"); 
-            document.getElementById("SFL").setAttribute("class", "story_front");
-            document.getElementById("FLL").setAttribute("class", "fam_left"); 
-            document.getElementById("FRL").setAttribute("class", "fam_right"); 
-            document.getElementById("FFL").setAttribute("class", "fam_front"); 
-            document.getElementById("HLL").setAttribute("class", "hobbies_left"); 
-            document.getElementById("HRL").setAttribute("class", "hobbies_right"); 
-            document.getElementById("HFL").setAttribute("class", "hobbies_front"); 
+            document.getElementById("MFL").style.color="#39ff14";
+            document.getElementById("SLL").style.backgroundColor="#051094";
+            document.getElementById("SRL").style.backgroundColor="#051094"; 
+            document.getElementById("SFL").style.color="#34e2e2";
+            document.getElementById("FLL").style.backgroundColor="#710193"; 
+            document.getElementById("FRL").style.backgroundColor="#710193"; 
+            document.getElementById("FFL").style.color="#ad7fa8"; 
+            document.getElementById("HLL").style.backgroundColor="#ff6289"; 
+            document.getElementById("HRL").style.backgroundColor="#ff6289"; 
+            document.getElementById("HFL").style.color="#F59784"; 
+ 
+
+      
         }
 </script>
 <!---->

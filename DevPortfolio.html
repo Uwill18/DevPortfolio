@@ -763,6 +763,17 @@ white-space: nowrap;
   margin-left: -60px;
 }
 
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
@@ -770,7 +781,15 @@ white-space: nowrap;
 
 
 
-
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: transparent;
+   color: white;
+   text-align: center;
+}
 
 
 
@@ -1228,6 +1247,7 @@ white-space: nowrap;
       </div>
       <div class="icons">
         <a href="https://www.linkedin.com/in/uri-easter-34491a209/" class = "fa fa-linkedin"></a>
+        <!-- https://www.w3schools.com/css/css_tooltip.asp -->
         <a href="mailto:uwill18@wgu.edu" class = "fa fa-envelope tooltip">
           <span class="tooltiptext">uwill18@wgu.edu</span>
         </a>
@@ -1237,6 +1257,10 @@ white-space: nowrap;
 
 
 
+    <footer>
+      <p>Easter Portfolio Productions &copy; 2023. All Rights Reserved.</p>
+    </footer>
+   
 
 
 

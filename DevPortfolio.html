@@ -740,7 +740,32 @@ white-space: nowrap;
 
 
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 
 
@@ -1203,7 +1228,9 @@ white-space: nowrap;
       </div>
       <div class="icons">
         <a href="https://www.linkedin.com/in/uri-easter-34491a209/" class = "fa fa-linkedin"></a>
-        <a href="" class = "fa fa-envelope"></a>
+        <a href="mailto:uwill18@wgu.edu" class = "fa fa-envelope tooltip">
+          <span class="tooltiptext">uwill18@wgu.edu</span>
+        </a>
         <a href="https://github.com/Uwill18" class = "fa fa-github"></a>
       </div>
     </form>

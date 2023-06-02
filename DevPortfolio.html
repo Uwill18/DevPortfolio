@@ -117,13 +117,15 @@
             color: black;
             background-color: #39ff14;
             font-family: Inconsolata, monospace;
-            max-width: 95%;
+            width: 95%;
+            max-width: 740px;
             border-style: dotted;
             border-radius: 10px;
-            /*text-align: center;*/
+            bottom: 10%;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 4%;
             padding: 15px;
-            justify-content:center;
-
         }
 
         .about-entry {
@@ -220,7 +222,7 @@ font-family: 'Source Sans Pro', sans-serif;
 
 
 
-        #Projects {
+               #Projects {
             background-color: #282828;
             color: black;
             height: 100%;
@@ -234,7 +236,7 @@ font-family: 'Source Sans Pro', sans-serif;
         .row {
             margin: 10px -16px;
             flex-direction:column;
-            max-height: 1100px;
+            /*height: 1100px;*/
             
         }
 
@@ -273,10 +275,6 @@ font-family: 'Source Sans Pro', sans-serif;
         .show {
             display: flex;
         }
-
-
-
-
 
         .quote-text {
             background-image: url("https://thumbs.dreamstime.com/b/ancient-papyrus-background-2467019.jpg");
@@ -655,7 +653,7 @@ font-family: 'Source Sans Pro', sans-serif;
             max-width: 97%;
             border-radius: 4px;
             padding: 55px 30px;
-            margin-bottom: 2%;
+            margin-bottom: 12.5%;
         }
 
         form .title h2 {
@@ -984,6 +982,7 @@ font-family: 'Source Sans Pro', sans-serif;
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <div id="welcome-spacing">
             <h2>Hello!</h2>
+            <img src="" alt="" style="width:80">
             <p id="welcome"></p>
         </div>
     </div>
@@ -1498,14 +1497,14 @@ One of which is a toddler, and the other is <span id="timer"></span> months old!
     <script>
         function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
+  //document.getElementById("main").style.marginLeft = "250px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.body.style.backgroundColor = "white";
+  //document.getElementById("main").style.marginLeft= "0";
+  //document.body.style.backgroundColor = "white";
 }
     </script>
     <!--Nav opening script-->
